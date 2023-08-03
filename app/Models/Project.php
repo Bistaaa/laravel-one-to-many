@@ -15,6 +15,12 @@ class Project extends Model
         'start_date',
         'end_date',
         'difficulty',
-        'picture'
+        
+        'type_id'
     ];
+
+    public function type() {
+
+        return $this -> belongsTo(Type :: class);
+    }
 }
